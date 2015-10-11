@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Friends</string>
+
+    <string name="action_about">About</string>
+    <string name="action_help">Help</string>
+    <string name="about_info">Ma\&apos;ad Shipchandler - CPAC</string>
+    <string name="help_info">Please type in a database name. Click on the results to show the email and mobile number of the contacts</string>
+    <string name="settings_alert_title">Help Page</string>
+
+    <string name="edit_text_hint">Enter Database Name</string>
+    <string name="button_text">Enter</string>
+    <string name="database_not_found_error">Database not found</string>
+    <string name="contact_alert_title">Contact Information</string>
+    <string name="ok">Okay</string>
+</resources>
