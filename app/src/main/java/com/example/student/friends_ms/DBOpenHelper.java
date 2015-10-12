@@ -11,6 +11,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.SQLException;
 
+// Inspired from http://blog.softeq.com/2012/12/using-pre-populated-sqlite-database-in.html
+
 public class DBOpenHelper extends SQLiteOpenHelper
 {
     private static String DB_PATH; // Path to the folder with databases
