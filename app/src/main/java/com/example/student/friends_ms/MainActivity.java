@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public void generateDB(View view)
     {
         // Inspired from http://stackoverflow.com/questions/1974489/how-to-get-text-from-edittext
+        // Databse manipulation inspried from http://blog.softeq.com/2012/12/using-pre-populated-sqlite-database-in.html
         EditText editText = (EditText) findViewById(R.id.editText);
         String DB_NAME = editText.getText().toString();
         if(!DB_NAME.equals("Database_MS.db"))
