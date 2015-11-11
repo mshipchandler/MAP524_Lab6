@@ -23,16 +23,7 @@ public class ContentProviderMS extends ContentProvider
     @Override
     public boolean onCreate()
     {
-        DBOpenHelper dbOpenHelper = new DBOpenHelper(getContext(), DB_NAME);
-        try
-        {
-            db = dbOpenHelper.openDataBase();
-        }
-        catch (SQLException e)
-        {
-            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-        return true;
+          return true;
     }
 
     @Override
@@ -62,6 +53,18 @@ public class ContentProviderMS extends ContentProvider
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder)
     {
+        System.out.println("In function query of content provider: " + DB_NAME);
+
+        dbOpenHelper = new DBOpenHelper(getContext(), DB_NAME);
+        try
+        {
+            db = dbOpenHelper.openDataBase();
+        }
+        catch (SQLException e)
+        {
+            System.out.println("Error in opening databse: " + e);
+        }
+
         Cursor friendCursor = db.rawQuery("SELECT * FROM friends_MS", null);
 
         return friendCursor;

@@ -16,11 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
-    <provider
-        android:authorities="com.example.student.friends_ms"
-        android:name=".contentprovider.ContentProviderMS"
-        />
+        <provider
+            android:authorities="com.example.student.friends_ms.ContentProviderMS"
+            android:enabled="true"
+            android:multiprocess="true"
+            android:name=".ContentProviderMS"
+            android:exported="true"
+            />
+    </application>
 
 </manifest>
